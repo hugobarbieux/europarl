@@ -13,7 +13,7 @@ print "The pdf file has %d bytes" % len(pdfdata)
 
 xmldata = scraperwiki.pdftoxml(pdfdata)
 print "After converting to xml it has %d bytes" % len(xmldata)
-print "The first 2000 characters are: ", xmldata[0:]
+print "Beggining after characters of the 3 first pages", xmldata[:2000]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath to find <text> tags
