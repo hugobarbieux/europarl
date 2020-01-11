@@ -24,5 +24,6 @@ for line in lines:
     
 record = {}
 for line in lines:
-    record["names"] = line.text
-    scraperwiki.sqlite.save(['names'], record)
+    if len(line.text)<11:
+        record["names"] = line.text
+        scraperwiki.sqlite.save(['names'], record)
