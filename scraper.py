@@ -25,5 +25,5 @@ for line in lines:
 record = {}
 for line in lines:
     record["date"] = line.text
-    scraperwiki.sqlite.save(['date'], record)
+    scraperwiki.sqlite.save(["date"], record)
     print record
