@@ -17,7 +17,7 @@ print "The first 2000 characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath to find <text> tags
-lines = root.findall('.//text[@font="12"]//b')
+lines = root.findall('.//text[@font="9"]//page')
 print lines
 for line in lines:
     print line.text
