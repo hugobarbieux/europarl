@@ -17,7 +17,7 @@ print "The first 2000 characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath to find <text> tags
-lines = root.findall('.//text[@font="9"]//text')
+lines = root.findall('.//text[@font="12"]//b')
 print lines
 for line in lines:
     print line.text
@@ -25,5 +25,4 @@ for line in lines:
 record = {}
 for line in lines:
     record["date"] = line.text
-    scraperwiki.sqlite.save(["date"], record)
-    print record
+    scraperwiki.sqlite.save(['date'], record)
