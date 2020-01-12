@@ -11,6 +11,7 @@ print "The pdf file has %d bytes" % len(pdfdata)
 #convert to xml and print some info
 xmldata = scraperwiki.pdftoxml(pdfdata)
 print "After converting to xml it has %d bytes" % len(xmldata)
+print "All pdf characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath, to find <text> tags
