@@ -4,7 +4,7 @@ import urllib2
 import lxml.etree
 
 #create a variable called 'url' and then read what's there
-url = "https://www.europarl.europa.eu/doceo/document/PV-9-2019-07-18-RCV_FR.pdf"
+url = "https://www.europarl.europa.eu/doceo/document/PV-9-2019-12-19-RCV_FR.pdf"
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
 
@@ -15,7 +15,7 @@ print "All pdf characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath, to find <text> tags
-lines = root.findall('.//text[@font="12"]//b')
+lines = root.findall('.//text')
 print lines
 for line in lines:
     print line.text
