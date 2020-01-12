@@ -4,7 +4,7 @@ import urllib2
 import lxml.etree
 
 #create a variable called 'url' and then read what's there
-url = "https://www.europarl.europa.eu/doceo/document/PV-9-2019-07-15-RCV_FR.pdf"
+url = "https://www.europarl.europa.eu/doceo/document/PV-9-2019-07-18-RCV_FR.pdf"
 pdfdata = urllib2.urlopen(url).read()
 print "The pdf file has %d bytes" % len(pdfdata)
 
