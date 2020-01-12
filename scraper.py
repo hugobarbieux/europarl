@@ -15,7 +15,7 @@ print "All pdf characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath, to find <text> tags
-lines = root.findall('.//text[@height="13"]')
+lines = root.findall('.//text[@height="13"]//b')
 print lines
 for line in lines:
     print line.text
