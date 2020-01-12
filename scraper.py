@@ -49,7 +49,7 @@ for line in lines:
         continue
         
     #if 'fontvalue' is 9
-    if fontvalue == "9"
+    if fontvalue == "9" and len(line.text)>1:
     #grab the text in 'line' and store it in a field called 'location' in the
     #dictionary variable 'names'
         record["names"] = line.text
