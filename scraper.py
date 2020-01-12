@@ -23,5 +23,6 @@ for line in lines:
 #create a variable, record, and make it an empty dictionary
 record = {}
 for line in lines:
-    record["result"] = line.text
-    scraperwiki.sqlite.save(['result'], record)
+    if len(line.text)>3:
+        record["result"] = line.text
+        scraperwiki.sqlite.save(['result'], record)
