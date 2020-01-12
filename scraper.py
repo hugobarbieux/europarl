@@ -15,7 +15,7 @@ print "All pdf characters are: ", xmldata[0:]
 root = lxml.etree.fromstring(xmldata)
 
 # this line uses xpath, to find <text> tags
-lines = root.findall('.//text[@font="9"]//b')
+lines = root.findall('.//text[@font="12"]//b')
 print lines
 for line in lines:
     print line.text
@@ -23,6 +23,6 @@ for line in lines:
 #create a variable, record, and make it an empty dictionary
 record = {}
 for line in lines:
-    if len(line.text)>3:
+    if len(line.text)<3:
         record["result"] = line.text
         scraperwiki.sqlite.save(['result'], record)
